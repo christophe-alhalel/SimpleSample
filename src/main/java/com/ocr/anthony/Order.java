@@ -8,6 +8,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import static java.nio.file.StandardOpenOption.APPEND;
 
+/*
+This class is used scan user entries and provides menu selection
+*/
 public class Order {
 
     private Scanner sc = new Scanner(System.in);
