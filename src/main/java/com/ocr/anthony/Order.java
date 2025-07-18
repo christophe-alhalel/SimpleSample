@@ -9,8 +9,8 @@ import java.util.Scanner;
 import static java.nio.file.StandardOpenOption.APPEND;
 
 /*
-This class is used scan user entries and provides menu selection
-*/
+ * This class is used to scan user entries and provide menu selection
+ */
 public class Order {
 
     private Scanner sc = new Scanner(System.in);
@@ -72,7 +72,7 @@ public class Order {
             try {
                 Files.write(orderPath, String.format(orderLine).getBytes(), APPEND);
             } catch (IOException e) {
-                System.out.println("Ooops une erreur est survenue. Merci de réessayer plus tard");
+                System.out.println("Oups une erreur est survenue. Merci de réessayer plus tard");
                 return;
             }
         }
@@ -225,9 +225,6 @@ public class Order {
     }
 
 
-    /**
-     * Display a question about menu in the standard input, get response and display it
-     */
     /**
      * Display a question about menu in the standard input, get response and display it
      * @return the number of the selected menu
