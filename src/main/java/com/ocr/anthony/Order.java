@@ -118,34 +118,18 @@ public class Order {
 
     public void displaySelectedSide(int nbSide, boolean allSidesEnable) {
 
+        String[] sides;
         if (allSidesEnable) {
-                switch (nbSide) {
-                    case 1:
-                        System.out.println("Vous avez choisi comme accompagnement : légumes frais");
-                        break;
-                    case 2:
-                        System.out.println("Vous avez choisi comme accompagnement : frites");
-                        break;
-                    case 3:
-                        System.out.println("Vous avez choisi comme accompagnement : riz");
-                        break;
-                    default:
-                        System.out.println("Vous n'avez pas choisi d'accompagnement parmi les choix proposés");
-                        break;
-                }
-            } else {
-                switch (nbSide) {
-                    case 1:
-                        System.out.println("Vous avez choisi comme accompagnement : riz");
-                        break;
-                    case 2:
-                        System.out.println("Vous avez choisi comme accompagnement : pas de riz");
-                        break;
-                    default:
-                        System.out.println("Vous n'avez pas choisi d'accompagnement parmi les choix proposés");
-                        break;
-                }
-            }
+            sides = new String[]{"légumes frais", "frites", "riz"};
+        } else {
+            sides = new String[]{"riz", "pas de riz"};
+        }
+
+        if (nbSide >= 1 && nbSide <= sides.length) {
+            System.out.println("Vous avez choisi comme accompagnement : " + sides[nbSide - 1]);
+        } else {
+            System.out.println("Vous n'avez pas choisi d'accompagnement parmi les choix proposés");
+        }
     }
 
         /**
