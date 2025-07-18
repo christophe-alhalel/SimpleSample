@@ -14,7 +14,16 @@ This class is used scan user entries and provides menu selection
 public class Order {
 
     private Scanner sc = new Scanner(System.in);
-    String orderSummary="";
+    /** Summary of the current order. */
+    private String orderSummary="";
+
+    /**
+     * Getter for order summary.
+     * @return the formatted summary of the order
+     */
+    public String getOrderSummary() {
+        return orderSummary;
+    }
 
     /**
      * Display all available menus in the restaurant.

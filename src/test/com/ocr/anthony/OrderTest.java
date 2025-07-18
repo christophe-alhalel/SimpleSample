@@ -246,7 +246,7 @@ class OrderTest {
         order = new Order();
         String[] responses = {"BMW", "Audi", "Mercedes"};
         int choice = order.askSomething("voiture", responses);
-        assertEquals("Vous avez choisi comme voiture : BMW%n", order.orderSummary);
+        assertEquals("Vous avez choisi comme voiture : BMW%n", order.getOrderSummary());
     }
     @Test
     public void Given_Responses_When_CallingRunMenus_Then_FillOrderSummaryCorrectly() {
@@ -260,7 +260,7 @@ class OrderTest {
                 "Vous avez choisi comme boisson : eau plate%n" +
                 "Menu 2:%n" +
                 "Vous avez choisi comme menu : boeuf%n" +
-                "Vous avez choisi comme accompagnement : frites%n" , order.orderSummary);
+                "Vous avez choisi comme accompagnement : frites%n" , order.getOrderSummary());
     }
     @Test
     public void Given_TextResponse_When_CallingAskQuestion_Then_DisplayErrorSentence() {
