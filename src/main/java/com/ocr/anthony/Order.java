@@ -17,16 +17,6 @@ public class Order {
     String orderSummary="";
 
     /**
-     * Display all available menus in the restaurant.
-     */
-    private void displayAvailableMenu() {
-        System.out.println("Choix menu");
-        System.out.println("1 - poulet");
-        System.out.println("2 - boeuf");
-        System.out.println("3 - végétarien");
-        System.out.println("Que souhaitez-vous comme menu ?");
-    }
-    /**
      * Display a selected menu.
      * @param nbMenu The selected menu.
      */
@@ -157,35 +147,6 @@ public class Order {
             }
         }
 
-    /**
-     * Display all available sides depending on all sides enable or not.
-     * All sides = vegetables, frites and rice
-     * No all sides = rice or not
-     * @param allSideEnable enable display for all side or not
-     */
-    private void displayAvailableSide(boolean allSideEnable) {
-        System.out.println("Choix accompagnement");
-        if (allSideEnable) {
-            System.out.println("1 - légumes frais");
-            System.out.println("2 - frites");
-            System.out.println("3 - riz");
-        } else {
-            System.out.println("1 - riz");
-            System.out.println("2 - pas de riz");
-        }
-        System.out.println("Que souhaitez-vous comme accompagnement ?");
-    }
-
-    /**
-     * Display all available drinks in the restaurant
-     */
-    private void displayAvailableDrink() {
-        System.out.println("Choix boisson");
-        System.out.println("1 - eau plate");
-        System.out.println("2 - eau gazeuse");
-        System.out.println("3 - soda");
-        System.out.println("Que souhaitez-vous comme boisson ?");
-    }
 
 
     /**
