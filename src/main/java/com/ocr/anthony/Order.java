@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static java.nio.file.StandardOpenOption.APPEND;
@@ -70,7 +71,9 @@ public class Order {
             orderSummary += "Menu " + (i + 1) + ":%n";
             String orderLine = runMenu();
             try {
-                Files.write(orderPath, String.format(orderLine).getBytes(), APPEND);
+                Files.write(orderPath,
+                        String.format(orderLine).getBytes(),
+                        StandardOpenOption.CREATE, APPEND);
             } catch (IOException e) {
                 System.out.println("Ooops une erreur est survenue. Merci de réessayer plus tard");
                 return;
